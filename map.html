@@ -26,15 +26,72 @@
                         <img src="images/account-dark.svg">
                     </a>
                 </nav>
-                <main>
+                <main id="map-main">
                     <section>
-                        <img src="images/amsterdam.svg">
+                        <a href="#" id="open">
+                            <img src="images/amsterdam.svg">
+                        </a>
+                    </section>
+                    <section>
+                        <a href="#" id="close">X</a>
+                        <h2>West</h2>
+                        <section>
+                            <section>
+                                <p>Beautiful IJ</p>
+                            </section>
+                            
+                            <section>
+                                <p>Artistic wall</p>
+                            </section>
+                            
+                            <section>
+                                <p>Impressive pond</p>
+                            </section>
+
+                            <a href="#"><p>See more →</p></a>
+                        </section>
+                        <section>
+                            <h3>Summary</h3>
+                            <p>
+                                Amsterdam-West was built between roughly the end of the 19th century and
+                                1960. It is the most densely populated borough of Amsterdam and hosts a variety
+                                of neighbourhoods and cultures.
+                            </p>
+                        </section>
+                        <section>
+                            <h3>Things to do</h3>
+                            <p>  
+                                Look at user-submitted tasks for what you can do in Amsterdam-West!
+                                <label>Take a walk in the Erasmuspark
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label>Visit De Hallen
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label>Shop in the Kinkerstraat
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label>Check out the WG-terrein
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                  </label>
+                            </p>
+                        </section>
+                        <section>
+                            <h3>Activity</h3>
+                            <p>  
+                                What are other people doing?
+                            </p>
+                        </section>
                     </section>
                 </main>
                 <footer>
                     <section>
                         <section>
-                            <a>
+                            <a href="#">
                                 <img src="images/list.svg">
                             </a>
                         </section>
@@ -42,7 +99,7 @@
                             <img src="images/dividing-line.svg">
                         </section>
                         <section>
-                            <a>
+                            <a href="#">
                                 <img src="images/map.svg">
                             </a>
                         </section>
@@ -50,11 +107,14 @@
                             <img src="images/dividing-line.svg">
                         </section>
                         <section>
-                            <a>
+                            <a href="#">
                                 <img src="images/friends.svg">
                             </a>
                         </section>    
                     </section>
                 </footer>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script src="mapclick.js"></script>
             </body>
             </html>
