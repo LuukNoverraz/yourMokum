@@ -112,7 +112,7 @@ body > nav {
 	justify-content: space-between;
 }
 
-#open {
+nav + main:not(.info):not(.list):not(.social) section:first-child #open {
 	display: flex;
 	width: 100vw;
 	justify-content: center;
@@ -333,6 +333,16 @@ nav + main > section:nth-child(4) {
 	align-items: flex-end;
 	flex-wrap: wrap;
 	border-radius: 0.5em;
+	transition: transform 0.3s ease;
+}
+
+.info h2 + section section:hover {
+	transform: scale(1.05);
+}
+
+.info h2 + section + a p {
+	margin: 0.5em 2em;
+	text-align: center;
 }
 
 .info h2 + section section:nth-of-type(1) {

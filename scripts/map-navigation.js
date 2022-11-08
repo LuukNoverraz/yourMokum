@@ -44,6 +44,13 @@ $('#social-icon').click(function() {
 
 $('#see-more').click(function() {
     // Reveal more images
-    $("p", this).text("See less ←");
+    if ($('.info h2 + section section:nth-of-type(n+4)').hasClass("revealed"))
+    {
+        $("p", this).text("See more →");
+    }
+    else 
+    {
+        $("p", this).text("See less ←");
+    }
     $('.info h2 + section section:nth-of-type(n+4)').toggleClass("revealed");
 })
