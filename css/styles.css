@@ -304,7 +304,7 @@ nav + main > section:nth-child(4) {
 .social > section:nth-child(4) {
 	display: flex;
 	flex-direction: column;
-	padding: 1em;
+	padding: 1em;	
 }
 
 .social > section:nth-child(4) h2 {
@@ -313,9 +313,35 @@ nav + main > section:nth-child(4) {
 	margin: 1em 0
 }
 
+.social > section:nth-child(4) img {
+	max-width: 4em;
+}
+
+.social > section:nth-child(4) p {
+	text-align: center;
+}
+
 .social > section:nth-child(4) em {
 	font-style: normal;
 	font-weight: bold;
+}
+
+.social > section:nth-child(4) > section {
+	padding: 1em 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px #cacdca solid;
+}
+
+.social > section:nth-child(4) > section > section {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.social > section:nth-child(4) > section > section p:nth-of-type(2) {
+	font-style: italic;
 }
 
 .info h2 + section {
@@ -666,7 +692,6 @@ nav:has(+ .account), nav:has(+ .friends) {
 .friends h3 {
 	color: var(--sec);
 	font-size: 1em;
-	margin-left: 1em;
 }
 
 .friends img {
@@ -676,6 +701,15 @@ nav:has(+ .account), nav:has(+ .friends) {
 .friends > section {
 	display: flex;
 	align-items: center;
+	flex-direction: column;
+	border-bottom: 1px #cacdca solid;
+	width: 80%;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+.friends > section:last-of-type {
+	border-bottom: 0;
 }
 
 .account > section {
@@ -689,6 +723,13 @@ nav:has(+ .account), nav:has(+ .friends) {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	border-top: 1px #cacdca solid;
+	padding-top: 0.5em;
+	min-width: 250px;
+}
+
+.account form section {
+	border: none;
 }
 
 .account em {
@@ -714,7 +755,7 @@ nav:has(+ .account), nav:has(+ .friends) {
 	margin: 4em 0 2em 0;
 }
 
-.account label + a, .account form + a {
+.account label + a, .account form + a, .friends a {
 	background-color: var(--main);
 	font-family: 'Windsor';
 	color: var(--base);
