@@ -6,6 +6,14 @@ $('#close').click(function() {
     $('#map-main').toggleClass("info");
 })
 
+$('.list-item').click(function() {
+    // Redirect from list to info page
+    $('#map-main').toggleClass("info");
+    $('#map-main').toggleClass("list");
+    $('#list-icon').removeClass("current");
+    $('#map-icon').addClass("current");
+})
+
 $('#log-in').click(function() {
     // Show account information when log in button is pressed
     $(this).parent().addClass("hidden");
