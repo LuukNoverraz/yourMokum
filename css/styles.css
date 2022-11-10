@@ -676,6 +676,10 @@ nav:has(+ .account), nav:has(+ .friends) {
 	box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.25);
 }
 
+nav:has(+ .account) section {
+	margin: 0;
+}
+
 .account h2, .friends h2 {
 	color: var(--sec);
 	font-size: 1.5em;
