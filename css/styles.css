@@ -244,6 +244,8 @@ nav + main > section:nth-child(3) > section a > section section {
 	margin: 1em 0;
 }
 
+/* Foto's van Zuid, Oost en Centrum zijn van de ISGA gids */
+
 nav + main > section:nth-child(3) > section:nth-of-type(1) a > section section {
 	background-image: url('../images/boroughs/nieuw-west.webp');
 }
@@ -438,6 +440,8 @@ nav h1 span {
 }
 
 .landing {
+	background: url(../images/background.png) center center;
+	background-size: 150%;
 	margin-top: -10vh;
 	height: 50vh;
 	display: flex;
@@ -512,7 +516,57 @@ a {
 	color: var(--main);
 }
 
-label:first-of-type {
+/* #log-in {
+	display: none;
+	background-color: var(--base);
+	border-radius: 0.5em;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	text-align: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	flex-direction: column;
+	width: 300px;
+	height: 200px;
+}
+
+#log-in form {
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	align-items: center;
+}
+
+#log-in h2 {
+	color: var(--sec);
+	margin: 0.5em 0;
+	font-family: 'Windsor';
+}
+
+#log-in input {
+	margin-top: 1em;
+	border: 1px #cacdca solid;
+	border-radius: 0.25em;
+	padding: 0.25em;
+}
+
+#log-in input:last-of-type {
+	background-color: var(--main);
+	font-family: 'Windsor';
+	color: var(--base);
+	width: 50%;
+	padding: 0.5em 0;
+	border: 0;
+	border-radius: 0.5em;
+}
+
+.log-in-screen {
+	display: flex !important;
+} */
+
+.info h2 + section ~ section label:first-of-type {
 	margin-top: 1em;
 }
 
@@ -529,7 +583,7 @@ label:first-of-type {
 	margin: 0 0 2em 2em;
 }
 
-label {
+.info h2 + section ~ section label {
 	display: block;
 	position: relative;
 	padding-left: 35px;
@@ -542,7 +596,7 @@ label {
 	user-select: none;
 }
 
-label input {
+.info h2 + section ~ section label input {
 	position: absolute;
 	opacity: 0;
 	cursor: pointer;
@@ -559,8 +613,8 @@ label input {
 	background-color: #eee;
 }
 
-.label:hover input ~ .checkmark {
-	background-color: #ccc;
+label:hover input ~ .checkmark {
+	background-color: #cacdca;
 }
 
 label input:checked ~ .checkmark {
@@ -597,6 +651,85 @@ footer {
 
 footer a {
 	color: var(--sec);
+}
+
+nav:has(+ .account) {
+	z-index: 1;
+	box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.25);
+}
+
+.account h1 {
+	color: var(--sec);
+	font-size: 1.5em;
+	font-family: 'Windsor';
+	padding: 1em 1em 0.5em 1em;
+	text-align: center;
+}
+
+.account h2 {
+	color: var(--sec);
+	font-size: 1em;
+	font-family: 'Spectral';
+	text-align: center;
+}
+
+.account > section {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.account > section section {
+	display: flex;
+	flex-direction: column;
+}
+
+.account input {
+	margin-top: 1em;
+	border: 1px #cacdca solid;
+	border-radius: 0.25em;
+	padding: 0.25em;
+	font-family: 'Spectral';
+}
+
+.account form {
+	margin: 4em 0 2em 0;
+}
+
+.account a {
+	background-color: var(--main);
+	font-family: 'Windsor';
+	color: var(--base);
+	width: 50%;
+	padding: 0.5em 0;
+	border: 0;
+	border-radius: 0.5em;
+	margin-bottom: 1.5em;
+	text-align: center;
+	cursor: pointer;
+	width: 6em;
+}
+
+.hidden {
+	display: none !important;
+}
+
+#account-overview {
+	display: none;
+}
+
+#account-overview.logged-in {
+	display: flex !important;
+}
+
+#account-overview img {
+	max-width: 8em;
+	padding: 1em;
+}
+
+#account-overview a {
+	width: 10em;
 }
 
 /* Responsivity in case of desktop size screens */
